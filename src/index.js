@@ -10,6 +10,7 @@ import ReactNative, {
   StyleSheet,
   Text,
   TouchableOpacity,
+  TouchableWithoutFeedback,
   View
 } from 'react-native';
 
@@ -83,7 +84,7 @@ class ScrollingMenu extends Component {
     let items = []
     for (let i = 0; i <= this.props.items.length; i++) {
       items.push(
-        <TouchableOpacity
+        <TouchableWithoutFeedback
           key={i}
           style={styles.button}
           onPress={() => { this.scroll(i) }}
@@ -98,7 +99,7 @@ class ScrollingMenu extends Component {
           >
             {this.props.items[i]}
           </Text>
-        </TouchableOpacity>
+        </TouchableWithoutFeedback>
       )
     }
 
